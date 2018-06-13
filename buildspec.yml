@@ -21,6 +21,5 @@ phases:
 artifacts:
   type: zip
   files:
-    - 'ROOT/WEB-INF/classes/com/robertsonwebdev/sunshadersrestservice/**'
-    - 'ROOT/WEB-INF/classes/com/robertsonwebdev/sunshadersrestservice/controllers/**'
-    - 'ROOT/WEB-INF/lib/spring-boot-starter-data-rest-2.0.2.RELEASE.jar'
+    - 'ROOT/WEB-INF/classes/com/robertsonwebdev/sunshadersrestservice/Application.class'
+    - 'ROOT/WEB-INF/classes/com/robertsonwebdev/sunshadersrestservice/ServletInitializer.class'
