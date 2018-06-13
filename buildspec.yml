@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      # Upgrade AWS CLI to the latest version
+      - pip install --upgrade awscli
+  pre_build:
+    commands:
+      - echo Test started on `date`
+      - mvn clean compile test
+  build:
+    commands:
+      - echo Build started on `date`
+      - mvn war:exploded
+  post_build:
+    commands:
+      - echo Entering post_build phase...
+      - echo Build completed on `date`
+      - mv target/ROOT .
+artifacts:
+  type: zip
+  files:
+    - 'ROOT/WEB-INF/classes/com/robertsonwebdev/sunshadersrestservice/**'
+    - 'ROOT/WEB-INF/classes/com/robertsonwebdev/sunshadersrestservice/controllers/**'
+    - 'ROOT/WEB-INF/lib/spring-boot-starter-data-rest-2.0.2.RELEASE.jar'
