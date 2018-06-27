@@ -1,4 +1,4 @@
-package com.robertsonwebdev.sunshadersrestservice.controllers;
+package com.robertsonwebdev.domain;
 
 
 
