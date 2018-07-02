@@ -29,6 +29,11 @@ artifacts:
     - 'ROOT/WEB-INF/classes/com/robertsonwebdev/sunshadersrestservice/controllers/RequestController.class'
       # Domain Classes
     - 'ROOT/WEB-INF/classes/com/robertsonwebdev/domain/Response.class'
+    - 'ROOT/WEB-INF/classes/com/robertsonwebdev/domain/Appointment.class'
+      # Persistence Classes
+    - 'ROOT/WEB-INF/classes/com/robertsonwebdev/persistence/ApptRepository.class'
+      # DB
+    - 'ROOT/WEB-INF/classes/appt.sqlite'
       # Templates
     - 'ROOT/WEB-INF/classes/templates/greeting.html'
       # Project JAR files
