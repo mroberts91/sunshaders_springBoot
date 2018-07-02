@@ -21,7 +21,7 @@ phases:
 artifacts:
   type: zip
   files:
-    - 'ROOT/WEB-INF/classes/com/robertsonwebdev/sunshadersrestservice/Application.class'
+    - 'ROOT/WEB-INF/classes/com/robertsonwebdev/sunshadersrestservice/SunshadersRestService.class'
     - 'ROOT/WEB-INF/classes/com/robertsonwebdev/sunshadersrestservice/ServletInitializer.class'
     - 'ROOT/WEB-INF/classes/com/robertsonwebdev/sunshadersrestservice/controllers/GreetingController.class'
     - 'ROOT/WEB-INF/classes/com/robertsonwebdev/sunshadersrestservice/controllers/RequestController.class'
