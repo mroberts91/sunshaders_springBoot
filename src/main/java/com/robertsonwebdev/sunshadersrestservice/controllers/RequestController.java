@@ -14,7 +14,14 @@ public class RequestController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ArrayList<Appointment> response(){
-        ApptRepository repo = new ApptRepository();
-        return repo.getAppointments();
+        try {
+            ApptRepository repo = new ApptRepository();
+            repo.appointmentQuery();
+            return repo.getAppointments();
+        } catch (Exception ex){
+            ArrayList<Appointment> list = new ArrayList<>();
+            list.add(new Appointment("SQL", "Exception", "has", "occured!"));
+            return list;
+        }
     }
 }
