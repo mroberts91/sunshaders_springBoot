@@ -26,19 +26,19 @@ public class ApptRepository {
     public ApptRepository(){
         appointments = new ArrayList<>();
     }
-
-    public void createNewAppointment(String firstname, String lastname, String date, String time) {
-        try(Connection conn = DriverManager.getConnection("jdbc:mysql//sunshadersinstance.c9lfyx2a2tne.us-east-1.rds.amazonaws.com:3306/sunshaders?user=mrober23&password=mediline");
-            Statement stmt = conn.createStatement()){
-
-            Appointment appt = new Appointment(firstname, lastname, date, time);
-            String values = String.format("'%s', '%s', '%s', '%s', '%s'", appt.getFirstname(), appt.getLastname(), appt.getApptDate(), appt.getApptTime(), appt.getCreated());
-            String sql = "INSERT INTO schedule (firstname, lastname, apptDate, apptTime, created) VALUES (" + values + ")";
-            stmt.execute(sql);
-        } catch (SQLException ex){
-            System.out.println(ex.getMessage());
-        }
-    }
+//
+//    public void createNewAppointment(String firstname, String lastname, String date, String time) {
+//        try(Connection conn = DriverManager.getConnection("jdbc:mysql//sunshadersinstance.c9lfyx2a2tne.us-east-1.rds.amazonaws.com:3306/sunshaders?user=mrober23&password=mediline");
+//            Statement stmt = conn.createStatement()){
+//
+//            Appointment appt = new Appointment(firstname, lastname, date, time);
+//            String values = String.format("'%s', '%s', '%s', '%s', '%s'", appt.getFirstname(), appt.getLastname(), appt.getApptDate(), appt.getApptTime(), appt.getCreated());
+//            String sql = "INSERT INTO schedule (firstname, lastname, apptDate, apptTime, created) VALUES (" + values + ")";
+//            stmt.execute(sql);
+//        } catch (SQLException ex){
+//            System.out.println(ex.getMessage());
+//        }
+//    }
 
     public void appointmentQuery() throws SQLException{
         try(Connection conn = DriverManager.getConnection("jdbc:mysql://sunshadersinstance.c9lfyx2a2tne.us-east-1.rds.amazonaws.com:3306/sunshaders?user=mrober23&password=mediline");
