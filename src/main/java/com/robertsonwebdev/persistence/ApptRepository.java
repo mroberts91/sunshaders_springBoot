@@ -28,7 +28,7 @@ public class ApptRepository {
     }
 
     public void createNewAppointment(String firstname, String lastname, String date, String time) {
-        try(Connection conn = DriverManager.getConnection("jdbc:sqlite:/var/share/tomcat8/ROOT/WEB-INF/appt.sqlite");
+        try(Connection conn = DriverManager.getConnection("jdbc:mysql//sunshadersinstance.c9lfyx2a2tne.us-east-1.rds.amazonaws.com:3306/sunshaders?user=mrober23&password=mediline");
             Statement stmt = conn.createStatement()){
 
             Appointment appt = new Appointment(firstname, lastname, date, time);
@@ -41,17 +41,16 @@ public class ApptRepository {
     }
 
     public void appointmentQuery() throws SQLException{
-        try(Connection conn = DriverManager.getConnection("jdbc:sqlite:/var/share/tomcat8/ROOT/WEB-INF/appt.sqlite");
+        try(Connection conn = DriverManager.getConnection("jdbc:mysql://sunshadersinstance.c9lfyx2a2tne.us-east-1.rds.amazonaws.com:3306/sunshaders?user=mrober23&password=mediline");
             Statement stmt = conn.createStatement()){
-            String sql = "SELECT * FROM schedule";
+            String sql = "SELECT * from sunshaders.appointments";
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()){
                 String firstname = rs.getString(2);
                 String lastname = rs.getString(3);
-                String apptDate = rs.getString(4);
-                String apptTime = rs.getString(5);
-                String created = rs.getString(6);
-                Appointment appt = new Appointment(firstname, lastname, apptDate, apptTime, created);
+                String scheduled = rs.getString(4);
+                String created = rs.getString(5);
+                Appointment appt = new Appointment(firstname, lastname,scheduled, created);
                 appointments.add(appt);
 
             }
@@ -75,7 +74,7 @@ public class ApptRepository {
     }
 
     private void connectDB(){
-        try(Connection conn = DriverManager.getConnection("jdbc:sqlite:/var/share/tomcat8/ROOT/WEB-INF/appt.sqlite");
+        try(Connection conn = DriverManager.getConnection("jdbc:mysql//sunshadersinstance.c9lfyx2a2tne.us-east-1.rds.amazonaws.com:3306/sunshaders?user=mrober23&password=mediline");
             Statement stmt = conn.createStatement()){
 
             String sql = "SELECT * FROM customers";
