@@ -53,6 +53,7 @@ artifacts:
     - 'ROOT/WEB-INF/lib/log4j-api-2.10.0.jar'
     - 'ROOT/WEB-INF/lib/log4j-to-slf4j-2.10.0.jar'
     - 'ROOT/WEB-INF/lib/logback-classic-1.2.3.jar'
+    - 'ROOT/WEB-INF/lib/mysql-connector-java-6.0.6.jar'
     - 'ROOT/WEB-INF/lib/logback-core-1.2.3.jar'
     - 'ROOT/WEB-INF/lib/slf4j-api-1.7.25.jar'
     - 'ROOT/WEB-INF/lib/snakeyaml-1.19.jar'
