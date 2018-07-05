@@ -28,7 +28,7 @@ public class ApptRepository {
     }
 
     public void createNewAppointment(String firstname, String lastname, String date, String time) {
-        try(Connection conn = DriverManager.getConnection("jdbc:sqlite:./ROOT/WEB-INF/classes/appt.sqlite");
+        try(Connection conn = DriverManager.getConnection("jdbc:sqlite:/ROOT/WEB-INF/classes/appt.sqlite");
             Statement stmt = conn.createStatement()){
 
             Appointment appt = new Appointment(firstname, lastname, date, time);
@@ -41,7 +41,7 @@ public class ApptRepository {
     }
 
     public void appointmentQuery() throws SQLException{
-        try(Connection conn = DriverManager.getConnection("jdbc:sqlite:./ROOT/WEB-INF/classes/appt.sqlite");
+        try(Connection conn = DriverManager.getConnection("jdbc:sqlite:/ROOT/WEB-INF/classes/appt.sqlite");
             Statement stmt = conn.createStatement()){
             String sql = "SELECT * FROM schedule";
             ResultSet rs = stmt.executeQuery(sql);
@@ -75,7 +75,7 @@ public class ApptRepository {
     }
 
     private void connectDB(){
-        try(Connection conn = DriverManager.getConnection("jdbc:sqlite:./src/main/resources/appt.sqlite");
+        try(Connection conn = DriverManager.getConnection("jdbc:sqlite:ROOT/WEB-INF/classes/appt.sqlite");
             Statement stmt = conn.createStatement()){
 
             String sql = "SELECT * FROM customers";

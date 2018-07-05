@@ -20,7 +20,7 @@ public class RequestController {
             return repo.getAppointments();
         } catch (Exception ex){
             ArrayList<Appointment> list = new ArrayList<>();
-            list.add(new Appointment("SQL", "Exception", "has", "occured!"));
+            list.add(new Appointment("SQL", "Exception", "occured", ex.getMessage()));
             return list;
         }
     }
