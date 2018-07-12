@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class AppointmentController {
-    @GetMapping(path = "/admin")
+    @GetMapping(path = "/asds")
     public String goHome(){
-        return "index";
+        return "login";
     }
 }

@@ -27,6 +27,8 @@ artifacts:
       # Config
     - 'ROOT/WEB-INF/classes/com/robertsonwebdev/sunshadersrestservice/AppConfig.class'
     - 'ROOT/WEB-INF/classes/application.properties'
+    - 'ROOT/WEB-INF/classes/com/robertsonwebdev/sunshadersrestservice/MvcConfig.class'
+    - 'ROOT/WEB-INF/classes/com/robertsonwebdev/sunshadersrestservice/WebSecConfig.class'
       # POJOs
     - 'ROOT/WEB-INF/classes/com/robertsonwebdev/sunshadersrestservice/Appointment.class'
     - 'ROOT/WEB-INF/classes/com/robertsonwebdev/sunshadersrestservice/AppointmentRepository.class'
@@ -34,10 +36,12 @@ artifacts:
     - 'ROOT/WEB-INF/classes/com/robertsonwebdev/sunshadersrestservice/controllers/AppointmentController.class'
     - 'ROOT/WEB-INF/classes/com/robertsonwebdev/sunshadersrestservice/controllers/AppointmentRestController.class'
       # Static Pages
-    - 'ROOT/WEB-INF/classes/static/index.html'
+    - 'ROOT/WEB-INF/classes/static/datatables.js'
     - 'ROOT/WEB-INF/classes/static/sunshaders_logo.png'
       # Templates
+    - 'ROOT/WEB-INF/classes/templates/appointments.html'
     - 'ROOT/WEB-INF/classes/templates/greeting.html'
+    - 'ROOT/WEB-INF/classes/templates/login.html'
       # Project JAR files
     - 'ROOT/WEB-INF/lib/antlr-2.7.7.jar'
     - 'ROOT/WEB-INF/lib/aspectjweaver-1.8.13.jar'
@@ -81,6 +85,7 @@ artifacts:
     - 'ROOT/WEB-INF/lib/spring-boot-starter-jdbc-2.0.3.RELEASE.jar'
     - 'ROOT/WEB-INF/lib/spring-boot-starter-json-2.0.3.RELEASE.jar'
     - 'ROOT/WEB-INF/lib/spring-boot-starter-logging-2.0.3.RELEASE.jar'
+    - 'ROOT/WEB-INF/lib/spring-boot-starter-security-2.0.3.RELEASE.jar'
     - 'ROOT/WEB-INF/lib/spring-boot-starter-thymeleaf-2.0.3.RELEASE.jar'
     - 'ROOT/WEB-INF/lib/spring-boot-starter-tomcat-2.0.3.RELEASE.jar'
     - 'ROOT/WEB-INF/lib/spring-boot-starter-web-2.0.3.RELEASE.jar'
@@ -101,6 +106,9 @@ artifacts:
     - 'ROOT/WEB-INF/lib/spring-jcl-5.0.7.RELEASE.jar'
     - 'ROOT/WEB-INF/lib/spring-jdbc-5.0.7.RELEASE.jar'
     - 'ROOT/WEB-INF/lib/spring-orm-5.0.7.RELEASE.jar'
+    - 'ROOT/WEB-INF/lib/spring-security-config-5.0.6.RELEASE.jar'
+    - 'ROOT/WEB-INF/lib/spring-security-core-5.0.6.RELEASE.jar'
+    - 'ROOT/WEB-INF/lib/spring-security-web-5.0.6.RELEASE.jar'
     - 'ROOT/WEB-INF/lib/spring-tx-5.0.7.RELEASE.jar'
     - 'ROOT/WEB-INF/lib/spring-web-5.0.7.RELEASE.jar'
     - 'ROOT/WEB-INF/lib/spring-webmvc-5.0.7.RELEASE.jar'

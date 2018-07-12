@@ -1,10 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        #login-logo{
+            text-align: center;
+        }
+        .alert{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div id="login-logo" class="col-md-8">
+            <h1>Sunshaders Profesional Window Tintinng</h1>
+            <h2>Appointments Administration</h2>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    <hr>
+    <br>
+    <div class="row">
+        <div class="col-md-4 hidden-xs"></div>
+        <div class="col-md-4">
+            <div th:if="${param.error}">
+                <div class="alert alert-danger" role="alert">
+                    Username or Password was not found.
+                </div>
+            </div>
+            <div th:if="${param.logout}">
+                <div class="alert alert-success" role="alert">
+                    You were successfully logged out.
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 hidden-xs"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <form class="" th:action="@{/login}" method="post">
+                <div class="form-group">
+                    <label for="username">User Name</label>
+                    <input type="text" class="form-control" name="username" id="username" placeholder="Username" />
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" id="pasword" name="password" placeholder="Password" />
+                </div>
+                <button type="submit" class="btn btn-primary">Sign In</button>
+            </form>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+
 
 </body>
 </html>
