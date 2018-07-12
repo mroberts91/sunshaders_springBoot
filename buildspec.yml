@@ -35,6 +35,7 @@ artifacts:
     - 'ROOT/WEB-INF/classes/com/robertsonwebdev/sunshadersrestservice/controllers/AppointmentRestController.class'
       # Static Pages
     - 'ROOT/WEB-INF/classes/static/index.html'
+    - 'ROOT/WEB-INF/classes/static/sunshaders_logo.png'
       # Templates
     - 'ROOT/WEB-INF/classes/templates/greeting.html'
       # Project JAR files
