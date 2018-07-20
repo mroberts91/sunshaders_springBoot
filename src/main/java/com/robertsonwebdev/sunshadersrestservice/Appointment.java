@@ -12,15 +12,15 @@ public class Appointment {
     private long id;
     private String firstname;
     private String lastname;
-    private Date appointemntDate;
+    private Date appointmentDate;
     private Time appointmentTime;
 
     public Appointment(){}
 
-    public Appointment(String firstname, String lastname, Date appointemntDate, Time appointmentTime){
+    public Appointment(String firstname, String lastname, Date appointmentDate, Time appointmentTime){
         this.firstname = firstname;
         this.lastname = lastname;
-        this.appointemntDate = appointemntDate;
+        this.appointmentDate = appointmentDate;
         this.appointmentTime = appointmentTime;
     }
 
@@ -40,12 +40,12 @@ public class Appointment {
         this.lastname = lastname;
     }
 
-    public Date getAppointemntDate() {
-        return appointemntDate;
+    public Date getAppointmentDate() {
+        return appointmentDate;
     }
 
-    public void setAppointemntDate(String appointemntDate) {
-        this.appointemntDate = Date.valueOf(appointemntDate);
+    public void setAppointmentDate(String appointmentDate) {
+        this.appointmentDate = Date.valueOf(appointmentDate);
     }
 
     public Time getAppointmentTime() {

@@ -26,7 +26,7 @@ $(document).ready( function () {
         "aoColumns": [
             { "mData": "firstname" },
             { "mData": "lastname" },
-            { "mData": "appointemntDate" },
+            { "mData": "appointmentDate" },
             { "mData": "appointmentTime" }
         ],
         "oSearch" : {"sSearch": dayString}
