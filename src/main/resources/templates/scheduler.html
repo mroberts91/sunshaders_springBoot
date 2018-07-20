@@ -97,7 +97,7 @@
         $('#date').val(initialDate);
         $('#firstname').val($('#tempFirst').val());
         $('#lastname').val($('#tempLast').val());
-        $.getJSON("http://localhost:8080/services/all/" + initialDate, function (data) {
+        $.getJSON("sunshadersapp.ikhaew8qq8.us-east-1.elasticbeanstalk.com/services/all/" + initialDate, function (data) {
             let responseData = data;
             console.log(responseData.length);
             if (responseData.length === 0){
@@ -128,7 +128,7 @@
                 selectList.removeChild(selectList.firstChild);
             }
             let newDate = document.getElementById('date').value;
-            $.getJSON("http://localhost:8080/services/all/" + newDate, function (data) {
+            $.getJSON("sunshadersapp.ikhaew8qq8.us-east-1.elasticbeanstalk.com/services/all/" + newDate, function (data) {
 
                 let responseData = data;
                 console.log(responseData.length);
