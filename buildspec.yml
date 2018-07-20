@@ -40,9 +40,9 @@ artifacts:
     - 'ROOT/WEB-INF/classes/com/robertsonwebdev/sunshadersrestservice/controllers/ErrorController.class'
     - 'ROOT/WEB-INF/classes/com/robertsonwebdev/sunshadersrestservice/controllers/UserController.class'
       # Static Resources
-    - 'ROOT/WEB-INF/classes/static/resources/resources/images/*'
-    - 'ROOT/WEB-INF/classes/static/resources/resources/js/*'
-    - 'ROOT/WEB-INF/classes/static/resources/resources/styles/*'
+    - 'ROOT/WEB-INF/classes/static/resources/**/*'
+#    - 'ROOT/WEB-INF/classes/static/resources/js/*'
+#    - 'ROOT/WEB-INF/classes/static/resources/styles/*'
       # Templates
     - 'ROOT/WEB-INF/classes/templates/*'
       # Project JAR files
