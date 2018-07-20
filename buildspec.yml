@@ -40,11 +40,11 @@ artifacts:
     - 'ROOT/WEB-INF/classes/com/robertsonwebdev/sunshadersrestservice/controllers/ErrorController.class'
     - 'ROOT/WEB-INF/classes/com/robertsonwebdev/sunshadersrestservice/controllers/UserController.class'
       # Static Resources
-    - 'ROOT/WEB-INF/classes/static/resources/resources/images/**'
-    - 'ROOT/WEB-INF/classes/static/resources/resources/js/**'
-    - 'ROOT/WEB-INF/classes/static/resources/resources/styles/**'
+    - 'ROOT/WEB-INF/classes/static/resources/resources/images/*'
+    - 'ROOT/WEB-INF/classes/static/resources/resources/js/*'
+    - 'ROOT/WEB-INF/classes/static/resources/resources/styles/*'
       # Templates
-    - 'ROOT/WEB-INF/classes/templates/**'
+    - 'ROOT/WEB-INF/classes/templates/*'
       # Project JAR files
     - 'ROOT/WEB-INF/lib/antlr-2.7.7.jar'
     - 'ROOT/WEB-INF/lib/aspectjweaver-1.8.13.jar'
