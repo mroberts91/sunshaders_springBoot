@@ -61,7 +61,7 @@ public class SchedulerController {
     @PostMapping(path = "/register")
     public String createNewUser(@ModelAttribute User user){
         userRepository.save(user);
-        return "userLogin";
+        return "redirect:/scheduler/login";
     }
 
     @PostMapping(path = "/booking")
