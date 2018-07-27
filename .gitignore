@@ -1,5 +1,8 @@
 /target/
 !.mvn/wrapper/maven-wrapper.jar
+### Non-Public Config ###
+*.properties
+
 
 ### STS ###
 .apt_generated
